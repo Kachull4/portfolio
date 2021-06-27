@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><svg xml:space="preserve" viewBox="0 0 100 100" y="0" x="0"
+  xmlns="http://www.w3.org/2000/svg" id="圖層_1" version="1.1" width="47px" height="47px"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  style="width:100%;height:100%;background-size:initial;background-repeat-y:initial;background-repeat-x:initial;background-position-y:initial;background-position-x:initial;background-origin:initial;background-image:initial;background-color:rgb(255, 255, 255);background-clip:initial;background-attachment:initial">
+  <g class="ldl-scale" style="transform-origin:50% 50%;transform:rotate(0deg) scale(0.8, 0.8)">
+    <circle stroke-miterlimit="10" stroke-width="8" stroke="#221e1f" fill="#fff" r="38" cy="50" cx="50"
+      style="stroke:rgb(34, 30, 31);fill:rgb(255, 255, 255)"></circle>
+    <g>
+      <path fill="#221e1f"
+        d="M69 57.8c-.4 5-2.2 9-5.6 11.9-3.3 2.9-7.8 4.3-13.2 4.3-6 0-10.7-2-14.1-6-3.4-4-5.1-9.6-5.1-16.6v-2.9c0-4.5.8-8.4 2.4-11.9 1.6-3.4 3.8-6 6.8-7.9C43 26.9 46.4 26 50.3 26c5.4 0 9.7 1.4 13 4.3 3.3 2.9 5.2 6.9 5.7 12.2h-9.6c-.2-3-1.1-5.2-2.5-6.6-1.4-1.4-3.6-2-6.6-2-3.2 0-5.6 1.2-7.2 3.4-1.6 2.3-2.4 5.9-2.5 10.7v3.5c0 5 .8 8.7 2.3 11.1 1.5 2.3 3.9 3.5 7.2 3.5 3 0 5.2-.7 6.7-2 1.5-1.4 2.3-3.5 2.5-6.3H69z"
+        style="fill:rgb(34, 30, 31)"></path>
+    </g>
+  </g>
+</svg>
