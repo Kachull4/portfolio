@@ -6,8 +6,8 @@ $breakpointSmall: 50rem;
 $breakpointMedium: 93rem;
 $spacingSmall: 2rem;
 $spacingMedium: 5rem;
-$fontFamilyBase: serif;
-$fontFamilyHeddings: sans-serif;
+$fontFamilyBase: "Arbutus Slab", serif;
+$fontFamilyHeddings: "Montserrat Alternates", sans-serif;
 
 @mixin grid($minWidth) {
   display: grid;
@@ -136,6 +136,13 @@ body {
   &--photos {
     padding-top: 20rem;
   }
+  &--skills {
+    color: $backgroundColorDark;
+    padding-top: 15rem;
+  }
+  &--work {
+    color: #000;
+  }
 }
 .main-menu {
   text-align: right;
@@ -259,7 +266,47 @@ body {
     object-fit: cover;
   }
 }
+.skills {
+  &__item {
+    margin-bottom: 18px;
+  }
+}
+@keyframes progress {
+  from {
+    width: 0;
+    height: 10px;
+  }
+  to {
+    width: 100;
+    height: 10px;
+  }
+}
+.progress {
+  border: 2px solid $backgroundColorDark;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
 
+  &__bar {
+    height: 10px;
+    border-radius: 10px;
+    background: #9b9b9b;
+  }
+  &__percentage {
+    height: 10px;
+    border-radius: 2rem;
+    vertical-align: middle;
+    align-self: center;
+    background-image: linear-gradient(
+      to right,
+      $backgroundColorDark,
+      $textAndBorderColor
+    );
+  }
+}
+.is-visible {
+  animation: 2s progress ease;
+}
 .button-row {
   position: relative;
   text-align: center;
