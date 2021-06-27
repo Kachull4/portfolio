@@ -80,7 +80,6 @@ body {
     grid-template-areas:
       "photo menu"
       "photo description";
-    min-height: 100vh;
   }
   &__photo {
     position: absolute;
