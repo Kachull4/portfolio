@@ -39,6 +39,9 @@ body {
 * {
   box-sizing: border-box;
 }
+p {
+  margin: 0;
+}
 .container {
   max-width: 120rem;
   margin-left: auto;
@@ -60,6 +63,9 @@ body {
   &--h3 {
     font-size: 3rem;
   }
+  &--h4 {
+    margin-bottom: 2rem;
+  }
 }
 @keyframes signature-animation {
   to {
@@ -76,9 +82,9 @@ body {
   &__container {
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
-      "photo menu"
+      "menu menu"
       "photo description";
   }
   &__photo {
@@ -108,6 +114,10 @@ body {
     .title {
       font: inherit;
     }
+    @include small() {
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
   }
   &__signature {
     width: 25rem;
@@ -117,6 +127,14 @@ body {
       stroke-dashoffset: 1778;
       animation: signature-animation 3s ease forwards;
     }
+    @include small() {
+      width: 70%;
+    }
+  }
+}
+@include small() {
+  .title--h1 {
+    font-size: 12vw;
   }
 }
 @include medium() {
@@ -143,6 +161,7 @@ body {
 }
 .main-menu {
   text-align: right;
+  white-space: nowrap;
   font-size: 2.5rem;
   font-family: $fontFamilyHeddings;
   grid-area: menu;
@@ -237,29 +256,17 @@ body {
   .experiences {
     grid-template-columns: 1fr;
   }
-  .experiences__item {
-    aspect-ratio: 3/2;
-  }
-}
-.gallery {
-  @include grid(30rem);
-  gap: 1rem;
-  margin-left: 50px;
-  margin-right: 50px;
-  @media (min-width: 120rem) {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  > div {
-    position: relative;
-    padding-top: 56.25%;
-  }
-  img {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .main-menu {
+    &__list {
+      display: flex;
+      max-width: 100vw;
+      overflow: scroll;
+      margin-left: -$spacingMedium;
+      padding: 0 $spacingSmall;
+    }
+    &__link {
+      flex: 0 0 auto;
+    }
   }
 }
 .skills {
@@ -302,6 +309,30 @@ body {
 }
 .is-visible {
   animation: 2s progress ease;
+}
+.gallery {
+  @include grid(30rem);
+  gap: 1rem;
+  margin-left: 50px;
+  margin-right: 50px;
+  @media (min-width: 120rem) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  > div {
+    position: relative;
+    padding-top: 56.25%;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include small() {
+    grid-template-columns: 1fr;
+  }
 }
 .button-row {
   position: relative;
