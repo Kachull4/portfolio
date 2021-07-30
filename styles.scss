@@ -307,6 +307,10 @@ p {
 .is-visible {
   animation: 2s progress ease;
 }
+.annotation {
+  float: right;
+  font-size: 2.5rem;
+}
 .gallery {
   @include grid(30rem);
   gap: 1rem;
@@ -429,6 +433,14 @@ p {
   &--youtube {
     background-color: #f00;
     border-color: #f00;
+  }
+  &--inmobil {
+    background-color: #ffde29;
+    border: 0.5rem solid black;
+    font-weight: 600;
+    font-size: 3rem;
+    text-align: center;
+    width: 25rem;
   }
   &__icon {
     display: inline-block;

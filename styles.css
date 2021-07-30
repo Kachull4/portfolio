@@ -253,9 +253,6 @@ p {
   .experiences {
     grid-template-columns: 1fr 1fr;
   }
-  .experiences__item {
-    aspect-ratio: unset;
-  }
 }
 
 @media (max-width: 50rem) {
@@ -312,6 +309,11 @@ p {
 
 .is-visible {
   animation: 2s progress ease;
+}
+
+.annotation {
+  float: right;
+  font-size: 2.5rem;
 }
 
 .gallery {
@@ -455,6 +457,15 @@ p {
 .button--youtube {
   background-color: #f00;
   border-color: #f00;
+}
+
+.button--inmobil {
+  background-color: #ffde29;
+  border: 0.5rem solid black;
+  font-weight: 600;
+  font-size: 3rem;
+  text-align: center;
+  width: 25rem;
 }
 
 .button__icon {
