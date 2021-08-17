@@ -67,6 +67,7 @@ p {
 }
 
 .header__container {
+  min-height: 80vh;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto 1fr;
@@ -315,20 +316,49 @@ p {
   animation: 2s progress ease;
 }
 
-.work {
+.work__link {
+  display: inline-block;
+  position: relative;
   max-width: 30rem;
-  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 480px) {
-  .work {
+  .work__link {
     max-width: 100%;
   }
 }
 
+.work__img {
+  display: block;
+  width: 100%;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.4);
+}
+
+.work__overlay {
+  background-color: #ffe134d7;
+  font: 600 3rem "Montserrat Alternates", sans-serif;
+  position: absolute;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.work__overlay:hover {
+  opacity: 1;
+}
+
 .certificates {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1rem;
   margin-left: 50px;
   margin-right: 50px;
@@ -350,7 +380,7 @@ p {
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: scale-down;
+  object-fit: contain;
 }
 
 @media (max-width: 50rem) {
@@ -370,11 +400,12 @@ p {
   from {
     height: 0;
     width: 0;
+    border-color: rgba(0, 0, 0, 0.5);
   }
   to {
     height: 21rem;
     width: 21rem;
-    opacity: 0;
+    border-color: transparent;
   }
 }
 

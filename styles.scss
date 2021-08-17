@@ -79,8 +79,10 @@ p {
   padding: $spacingMedium 0 0;
   position: relative;
   overflow: hidden;
+  
 
   &__container {
+    min-height: 80vh;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto 1fr;
@@ -310,14 +312,43 @@ p {
   animation: 2s progress ease;
 }
 .work {
-  max-width: 30rem;
-  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.4);
-  @media (max-width: 480px) {
-    max-width: 100%;
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    max-width: 30rem;
+    @media (max-width: 480px) {
+      max-width: 100%;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.4);
+  }
+  &__overlay {
+    background-color: #ffe134d7;
+    font: 600 3rem $fontFamilyHeddings;
+    position: absolute;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 .certificates {
-  @include grid(35rem);
+  @include grid(25rem);
   gap: 1rem;
   margin-left: 50px;
   margin-right: 50px;
@@ -334,7 +365,7 @@ p {
     top: 0;
     width: 100%;
     height: 100%;
-    object-fit: scale-down;
+    object-fit: contain;
   }
   @include small() {
     grid-template-columns: 1fr;
@@ -350,11 +381,12 @@ p {
   from {
     height: 0;
     width: 0;
+    border-color: rgba(0, 0, 0, 0.5);
   }
   to {
     height: 21rem;
     width: 21rem;
-    opacity: 0;
+    border-color: transparent;
   }
 }
 .button {
