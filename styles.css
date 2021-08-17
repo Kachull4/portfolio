@@ -322,7 +322,7 @@ p {
 
 @media (max-width: 480px) {
   .work {
-    max-width: 80%;
+    max-width: 100%;
   }
 }
 
