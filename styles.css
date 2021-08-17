@@ -315,9 +315,15 @@ p {
   animation: 2s progress ease;
 }
 
-.in-mobil {
-  max-width: 40rem;
+.work {
+  max-width: 30rem;
   box-shadow: 0 10px 27px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 480px) {
+  .work {
+    max-width: 80%;
+  }
 }
 
 .certificates {
