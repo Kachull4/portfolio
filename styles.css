@@ -356,49 +356,37 @@ p {
   opacity: 1;
 }
 
-.carousel {
-  color: #170724;
-  --carousel-button-bg: #fff;
-  --carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
-    0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
-  --carousel-button-svg-width: 20px;
-  --carousel-button-svg-height: 20px;
-  --carousel-button-svg-stroke-width: 2.5;
+.certificates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1rem;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.carousel .carousel__button:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px #a78bfa;
+@media (min-width: 120rem) {
+  .certificates {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
-.carousel .carousel__button.is-prev {
-  left: -1.5rem;
+.certificates > div {
+  position: relative;
+  padding-top: 56.25%;
 }
 
-.carousel .carousel__button.is-next {
-  right: -1.5rem;
-}
-
-.carousel .carousel__dots {
-  color: #7e22ce;
-}
-
-#mainCarousel .carousel__slide {
+.certificates img {
+  position: absolute;
+  top: 0;
   width: 100%;
-  padding: 0;
+  height: 100%;
+  object-fit: contain;
 }
 
-#thumbCarousel .carousel__slide {
-  width: 88px;
-  padding: 0.75rem;
-}
-
-#thumbCarousel .carousel__slide img {
-  border-radius: 6px;
-}
-
-#thumbCarousel .carousel__slide.is-nav-selected img {
-  box-shadow: 0 0 0 4px #a78bfa;
+@media (max-width: 50rem) {
+  .certificates {
+    grid-template-columns: 1fr;
+  }
 }
 
 .button-row {
