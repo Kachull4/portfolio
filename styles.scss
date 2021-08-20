@@ -79,7 +79,10 @@ p {
   padding: $spacingMedium 0 0;
   position: relative;
   overflow: hidden;
-  
+  margin-top: -5rem;
+  @media (max-width: 480px) {
+    margin-top: -7rem;
+  }
 
   &__container {
     min-height: 80vh;
@@ -164,6 +167,8 @@ p {
   }
 }
 .main-menu {
+  top: 0;
+  position: sticky;
   text-align: right;
   white-space: nowrap;
   font-size: 2.5rem;
@@ -312,7 +317,6 @@ p {
   animation: 2s progress ease;
 }
 .work {
-
   &__link {
     display: inline-block;
     position: relative;
@@ -348,27 +352,22 @@ p {
   }
 }
 .certificates {
-  @include grid(25rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1rem;
   margin-left: 50px;
   margin-right: 50px;
-  @media (min-width: 120rem) {
-    grid-template-columns: repeat(6, 1fr);
-  }
 
-  > div {
+  & > div {
     position: relative;
     padding-top: 56.25%;
   }
-  img {
+  & img {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
-  }
-  @include small() {
-    grid-template-columns: 1fr;
   }
 }
 .button-row {
