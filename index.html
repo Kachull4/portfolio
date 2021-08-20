@@ -13,6 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="apple-touch-icon"
@@ -317,43 +321,98 @@
     >
       <div class="container">
         <h2 class="title title--h2">Certificates</h2>
-        <div class="certificates">
-          <div>
-            <img
-              src="/images/czechitas-html-css-2.webp"
-              alt="czechitas-html-css-2"
-            />
+        <div
+          style="
+            --swiper-navigation-color: #000;
+            --swiper-pagination-color: #000;
+          "
+          class="swiper-container mySwiper2"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="/images/czechitas-html-css-2.webp"
+                alt="czechitas-html-css-2"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/html.webp" alt="html" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/css.webp" alt="css" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/responsive-web-design.webp"
+                alt="responsive-web-design"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/javascript.webp" alt="javascript" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/foundations-of-ux-design.webp"
+                alt="foundations-of-ux-design"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/empathize-ux-design.webp"
+                alt="ux-design-process"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/ux-design-wireframes.webp"
+                alt="ux-design-wireframes"
+              />
+            </div>
           </div>
-          <div>
-            <img src="/images/html.webp" alt="html" />
-          </div>
-          <div><img src="/images/css.webp" alt="css" /></div>
-          <div>
-            <img src="/images/javascript.webp" alt="javascript" />
-          </div>
-          <div>
-            <img
-              src="/images/responsive-web-design.webp"
-              alt="responsive-web-design"
-            />
-          </div>
-          <div>
-            <img
-              src="/images/foundations-of-ux-design.webp"
-              alt="foundations-of-ux-design"
-            />
-          </div>
-          <div>
-            <img
-              src="/images/empathize-ux-design.webp"
-              alt="ux-design-process"
-            />
-          </div>
-          <div>
-            <img
-              src="/images/ux-design-wireframes.webp"
-              alt="ux-design-wireframes"
-            />
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div thumbsSlider="" class="mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="/images/czechitas-html-css-2.webp"
+                alt="czechitas-html-css-2"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/html.webp" alt="html" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/css.webp" alt="css" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/responsive-web-design.webp"
+                alt="responsive-web-design"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/javascript.webp" alt="javascript" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/foundations-of-ux-design.webp"
+                alt="foundations-of-ux-design"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/empathize-ux-design.webp"
+                alt="ux-design-process"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/ux-design-wireframes.webp"
+                alt="ux-design-wireframes"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -435,6 +494,7 @@
       </svg>
       <p>Kateřina Beranová 2021</p>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
