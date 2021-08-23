@@ -340,6 +340,7 @@ p {
   display: block;
   background-color: #202040;
   height: 0.2rem;
+  margin-top: 1.5rem;
 }
 
 .skills__title::before {
