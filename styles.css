@@ -339,7 +339,7 @@ p {
   content: "";
   display: block;
   background-color: #202040;
-  height: 0.2rem;
+  height: 0.1rem;
   margin-top: 1.5rem;
 }
 
@@ -347,6 +347,7 @@ p {
   content: "";
   display: block;
   background-color: #202040;
+  border: solid 0.5rem white;
   border-radius: 50%;
   width: 1rem;
   height: 1rem;
