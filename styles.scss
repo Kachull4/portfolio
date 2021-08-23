@@ -291,7 +291,6 @@ p {
     grid-template-columns: 1fr;
   }
 }
-
 .skills {
   &__item {
     margin-bottom: 18px;
@@ -362,7 +361,7 @@ p {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 1s;
     &:hover {
       opacity: 1;
     }
