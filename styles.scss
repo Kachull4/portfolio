@@ -57,7 +57,7 @@ p {
     font-size: 7rem;
     margin: 10rem 0;
     position: relative;
-    text-shadow: 0 4px 8px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
   }
   &--h2 {
     font-size: 5rem;
@@ -396,6 +396,8 @@ p {
 .mySwiper2 {
   height: 80%;
   width: 60%;
+  position: relative;
+  overflow: hidden;
   @include small() {
     width: 100%;
   }
