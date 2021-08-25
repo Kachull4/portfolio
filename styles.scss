@@ -396,8 +396,6 @@ p {
 .mySwiper2 {
   height: 80%;
   width: 60%;
-  position: relative;
-  overflow: hidden;
   @include small() {
     width: 100%;
   }
