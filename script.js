@@ -6,7 +6,7 @@ var scroll =
 var elementsToShow = document.querySelectorAll(".show-on-scroll");
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 10,
-  slidesPerView: 8,
+  slidesPerView: 10,
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
