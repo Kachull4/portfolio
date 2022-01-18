@@ -397,7 +397,6 @@ p {
 }
 
 .work__overlay {
-  background-color: #ffe134d7;
   font: 600 3rem "Montserrat Alternates", sans-serif;
   position: absolute;
   text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
@@ -416,6 +415,14 @@ p {
 
 .work__overlay:hover {
   opacity: 1;
+}
+
+.work__overlay--inmobil {
+  background-color: #ffe134d7;
+}
+
+.work__overlay--coursera {
+  background-color: #0058d2d2;
 }
 
 .swiper-container {

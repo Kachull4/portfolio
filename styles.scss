@@ -356,7 +356,6 @@ p {
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.4);
   }
   &__overlay {
-    background-color: #ffe134d7;
     font: 600 3rem $fontFamilyHeddings;
     position: absolute;
     text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
@@ -373,6 +372,14 @@ p {
     transition: opacity 1s;
     &:hover {
       opacity: 1;
+    }
+
+    &--inmobil {
+      background-color: #ffe134d7;
+    }
+
+    &--coursera {
+      background-color: #0058d2d2;
     }
   }
 }
