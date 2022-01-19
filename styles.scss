@@ -346,6 +346,7 @@ p {
     display: inline-block;
     position: relative;
     max-width: 30rem;
+    margin-right: 5rem;
     @include small() {
       max-width: 100%;
     }

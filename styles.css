@@ -382,6 +382,7 @@ p {
   display: inline-block;
   position: relative;
   max-width: 30rem;
+  margin-right: 5rem;
 }
 
 @media (max-width: 50rem) {
