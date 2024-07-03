@@ -5,18 +5,24 @@
 
     &__item {
         display: flex;
+        flex-direction: column;
         align-items: center;
         gap: $spacingLarge;
+
+        @media (min-width: $breakpointMedium) {
+            flex-direction: row;
+        }
     }
 
     &__link {
         display: inline-block;
         position: relative;
-        max-width: 35%;
-        margin-right: 5rem;
+        max-width: 100%;
+        order: 2;
 
-        @include small() {
-            max-width: 100%;
+        @media (min-width: $breakpointMedium) {
+            order: unset;
+            max-width: 35%;
         }
     }
 
