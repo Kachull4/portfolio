@@ -1,0 +1,29 @@
+$backgroundColorDark: #202040;
+$backgroundColorLight: #dcdcf5;
+$textAndBorderColor: #ff1e56;
+$colorLight: white;
+$breakpointSmall: 375px;
+$breakpointMedium: 768px;
+$breakpointLarge: 1440px;
+$spacingSmall: 2rem;
+$spacingMedium: 3rem;
+$spacingLarge: 5rem;
+$fontFamilyBase: "Arbutus Slab", serif;
+$fontFamilyHeddings: "Montserrat Alternates", sans-serif;
+
+@mixin grid($minWidth) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($minWidth, 1fr));
+}
+
+@mixin small() {
+    @media (max-width: $breakpointSmall) {
+        @content;
+    }
+}
+
+@mixin medium() {
+    @media (min-width: $breakpointSmall) and (max-width: $breakpointMedium) {
+        @content;
+    }
+}

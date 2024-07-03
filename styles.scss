@@ -1,47 +1,37 @@
-$backgroundColorDark: #202040;
-$backgroundColorLight: #dcdcf5;
-$textAndBorderColor: #ff1e56;
-$colorLight: white;
-$breakpointSmall: 50rem;
-$breakpointMedium: 93rem;
-$spacingSmall: 2rem;
-$spacingMedium: 5rem;
-$fontFamilyBase: "Arbutus Slab", serif;
-$fontFamilyHeddings: "Montserrat Alternates", sans-serif;
+@import "variables.scss";
+@import "about.scss";
+@import "experience.scss";
+@import "skills.scss";
+@import "work.scss";
+@import "education.scss";
 
-@mixin grid($minWidth) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax($minWidth, 1fr));
-}
-@mixin small() {
-  @media (max-width: $breakpointSmall) {
-    @content;
-  }
-}
-@mixin medium() {
-  @media (min-width: $breakpointSmall) and (max-width: $breakpointMedium) {
-    @content;
-  }
-}
 html {
   font-size: 62.5%;
 }
+
 html,
 body {
   padding: 0;
   margin: 0;
 }
+
 body {
   font-family: $fontFamilyBase;
   font-size: 1.6rem;
-  color: $colorLight;
   background-color: $backgroundColorDark;
+
+  @media (min-width: $breakpointMedium) {
+    font-size: 1.8rem;
+  }
 }
+
 * {
   box-sizing: border-box;
 }
+
 p {
   margin: 0;
+  margin-bottom: 2rem;
 }
 .container {
   max-width: 120rem;
@@ -49,9 +39,17 @@ p {
   margin-right: auto;
   padding: 0 $spacingMedium;
 }
+
 .title {
   font-family: $fontFamilyHeddings;
   color: $textAndBorderColor;
+  margin: 0;
+  margin-top: 2rem;
+  text-align: center;
+
+@media (min-width: $breakpointMedium) {
+  text-align: left;
+}
 
   &--h1 {
     font-size: 7rem;
@@ -61,14 +59,17 @@ p {
   }
   &--h2 {
     font-size: 5rem;
+    margin-bottom: 2rem;
   }
   &--h3 {
     font-size: 3rem;
+    margin-bottom: 1.8rem;
   }
   &--h4 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
+
 @keyframes signature-animation {
   to {
     stroke-dashoffset: 0;
@@ -80,6 +81,7 @@ p {
   padding: $spacingMedium 0 0;
   position: relative;
   overflow: hidden;
+
   @include small() {
     margin-top: -3rem;
   }
@@ -93,6 +95,7 @@ p {
       min-height: 80vh;
     }
   }
+
   &__photo {
     width: 100%;
     filter: drop-shadow(-3rem 0 3rem rgba(0, 0, 0, 0.3));
@@ -101,6 +104,7 @@ p {
       width: 120%;
       margin-left: -30%;
     }
+
     @media (min-width: $breakpointSmall) {
       position: absolute;
       bottom: 0;
@@ -110,6 +114,7 @@ p {
       object-position: center bottom;
     }
   }
+
   &__photo-container {
     display: flex;
     flex-direction: column;
@@ -120,6 +125,7 @@ p {
       z-index: 0;
     }
   }
+
   &__title {
     @include small() {
       order: -1;
@@ -127,6 +133,7 @@ p {
       z-index: -1;
     }
   }
+
   &__text {
     font-size: 2rem;
     text-align: right;
@@ -145,6 +152,7 @@ p {
       text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     }
   }
+
   &__signature {
     width: 25rem;
 
@@ -153,12 +161,14 @@ p {
       stroke-dashoffset: 1778;
       animation: signature-animation 3s ease forwards;
     }
+
     @include small() {
       width: 50%;
       margin-right: -7%;
     }
   }
 }
+
 @include small() {
   .title--h1,
   .title--h2 {
@@ -170,6 +180,7 @@ p {
     font-size: 8vw;
   }
 }
+
 .section {
   padding: $spacingMedium 0;
 
@@ -178,16 +189,14 @@ p {
   }
   &--light {
     background-color: $colorLight;
-  }
-  &--skills {
-    color: $backgroundColorDark;
-    padding-top: 15rem;
-  }
-  &--work {
     color: #000;
+  }
+
+  &--work {
     padding-bottom: 10rem;
   }
 }
+
 .main-menu {
   top: 0;
   position: sticky;
@@ -198,6 +207,7 @@ p {
   z-index: 1000;
   background-color: $backgroundColorDark;
   padding: 2rem;
+  color: $colorLight;
 
   &__list {
     padding-left: 0;
@@ -244,210 +254,6 @@ p {
   }
 }
 
-.experiences {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  margin: 0 0 -19.25rem;
-  padding: 0;
-  list-style: none;
-  gap: $spacingSmall;
-
-  &__title {
-    margin-top: 0;
-    color: $textAndBorderColor;
-  }
-  &__item {
-    background-color: $backgroundColorDark;
-    vertical-align: middle;
-    padding: $spacingSmall;
-    font-size: 2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  &__icon {
-    display: block;
-    margin-bottom: 1rem;
-    width: auto;
-
-    &--etn {
-        height: 1rem;
-    }
-
-    &--gcp {
-      height: 3rem;
-    }
-
-    &--czc {
-      height: 2rem;
-      margin-top: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    &--pet {
-      height: 3rem;
-    }
-
-    &--graduation {
-      height: 4rem;
-      margin-top: -0.5rem;
-      margin-bottom: 0.5rem;
-    }
-  }
-  @media (max-width: 80rem) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @include small() {
-    grid-template-columns: 1fr;
-  }
-}
-.skills {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  padding: 0;
-  list-style: none;
-  gap: $spacingSmall;
-
-  &__title {
-    position: relative;
-    text-align: center;
-    margin-top: 0;
-    color: $textAndBorderColor;
-
-    &::after {
-      content: "";
-      display: block;
-      background-color: $backgroundColorDark;
-      height: 0.1rem;
-      margin-top: 1.5rem;
-    }
-    &::before {
-      content: "";
-      display: block;
-      background-color: $backgroundColorDark;
-      border: solid 0.5rem white;
-      border-radius: 50%;
-      width: 1rem;
-      height: 1rem;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-  &__item {
-    background-color: white;
-    vertical-align: middle;
-    padding: $spacingSmall;
-    font-size: 2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  @media (max-width: 80rem) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @include small() {
-    grid-template-columns: 1fr;
-  }
-}
-.work {
-  &__link {
-    display: inline-block;
-    position: relative;
-    max-width: 30rem;
-    margin-right: 5rem;
-    @include small() {
-      max-width: 100%;
-    }
-  }
-  &__img {
-    display: block;
-    width: 100%;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.4);
-  }
-  &__overlay {
-    font: 600 3rem $fontFamilyHeddings;
-    position: absolute;
-    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    display: flex;
-    color: #fff;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 1s;
-    &:hover {
-      opacity: 1;
-    }
-
-    &--inmobil {
-      background-color: #ffe134d7;
-    }
-
-    &--coursera {
-      background-color: #0058d2d2;
-    }
-  }
-}
-.swiper-container {
-  width: 50%;
-  height: 30rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-.swiper-slide {
-  @include small() {
-    width: 100%;
-  }
-}
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.mySwiper2 {
-  height: 80%;
-  width: 60%;
-  @include small() {
-    width: 100%;
-  }
-}
-.mySwiper {
-  height: 20%;
-  box-sizing: border-box;
-  padding: 1rem 0;
-}
-.mySwiper .swiper-slide {
-  opacity: 0.4;
-  &:hover {
-    cursor: pointer;
-  }
-}
-.mySwiper .swiper-slide-thumb-active {
-  opacity: 1;
-}
-.button-row {
-  position: relative;
-  text-align: center;
-  margin-bottom: 8rem;
-  z-index: 0;
-}
-@keyframes pulse-animation {
-  from {
-    height: 0;
-    width: 0;
-    border-color: rgba(0, 0, 0, 0.5);
-  }
-  to {
-    height: 21rem;
-    width: 21rem;
-    border-color: transparent;
-  }
-}
 .button {
   text-decoration: none;
   color: inherit;
@@ -547,6 +353,7 @@ p {
   padding-top: 4rem;
   padding-bottom: 4rem;
   text-align: center;
+  color: $colorLight;
 
   &__text {
     font-size: 3rem;
@@ -575,3 +382,4 @@ p {
 .circle-dva {
   animation: copy-animation 2s ease infinite;
 }
+

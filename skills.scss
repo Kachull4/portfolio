@@ -1,0 +1,19 @@
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $spacingSmall;
+
+    @media (min-width: $breakpointMedium) {
+        gap: $spacingLarge;
+    }
+
+    &__item {
+        width: 5rem;
+        height: auto;
+
+        @media (min-width: $breakpointMedium) {
+            width: 10rem;
+        }
+    }
+}
