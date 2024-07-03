@@ -243,6 +243,7 @@ p {
     }
   }
 }
+
 .experiences {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -268,17 +269,24 @@ p {
     margin-bottom: 1rem;
     width: auto;
 
+    &--etn {
+        height: 1rem;
+    }
+
     &--gcp {
       height: 3rem;
     }
+
     &--czc {
       height: 2rem;
       margin-top: 0.5rem;
       margin-bottom: 1.5rem;
     }
+
     &--pet {
       height: 3rem;
     }
+
     &--graduation {
       height: 4rem;
       margin-top: -0.5rem;
