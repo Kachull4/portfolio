@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .section--about p:last-of-type {
   margin-bottom: 0;
 }
@@ -120,7 +121,7 @@
   margin-right: auto;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .swiper-slide {
     width: 100%;
   }
@@ -138,7 +139,7 @@
   height: 80%;
   width: 60%;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .mySwiper2 {
     width: 100%;
   }
@@ -217,6 +218,7 @@ p {
   padding: 0 3rem;
 }
 
+/*----------NADPISY------------*/
 .title {
   font-family: "Montserrat Alternates", sans-serif;
   color: #ff1e56;
@@ -235,9 +237,24 @@ p {
   position: relative;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
+@media (max-width: 480px) {
+  .title--h1 {
+    font-size: 12vw;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .title--h1 {
+    font-size: 8vw;
+  }
+}
 .title--h2 {
   font-size: 5rem;
   margin-bottom: 2rem;
+}
+@media (max-width: 480px) {
+  .title--h2 {
+    font-size: 12vw;
+  }
 }
 .title--h3 {
   font-size: 3rem;
@@ -252,18 +269,26 @@ p {
     stroke-dashoffset: 0;
   }
 }
+/*----------HLAVIČKA------------*/
 .header {
   background-color: #202040;
   padding: 3rem 0 0;
   position: relative;
   overflow: hidden;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .header {
     margin-top: -3rem;
   }
 }
-@media (min-width: 375px) {
+@media (max-width: 480px) {
+  .header__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "photo" "description";
+  }
+}
+@media (min-width: 480px) {
   .header__container {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -276,13 +301,13 @@ p {
   width: 100%;
   filter: drop-shadow(-3rem 0 3rem rgba(0, 0, 0, 0.3));
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .header__photo {
     width: 120%;
     margin-left: -30%;
   }
 }
-@media (min-width: 375px) {
+@media (min-width: 480px) {
   .header__photo {
     position: absolute;
     bottom: 0;
@@ -301,12 +326,12 @@ p {
   position: relative;
   grid-area: photo;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .header__photo-container {
     z-index: 0;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .header__title {
     order: -1;
     margin: 0 0 -3.5rem;
@@ -323,7 +348,7 @@ p {
 .header__text .title {
   font: inherit;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .header__text {
     padding: 0 3rem 1rem 3rem;
     position: absolute;
@@ -340,24 +365,14 @@ p {
   stroke-dashoffset: 1778;
   animation: signature-animation 3s ease forwards;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .header__signature {
     width: 50%;
     margin-right: -7%;
   }
 }
 
-@media (max-width: 375px) {
-  .title--h1,
-  .title--h2 {
-    font-size: 12vw;
-  }
-}
-@media (min-width: 375px) and (max-width: 768px) {
-  .title--h1 {
-    font-size: 8vw;
-  }
-}
+/*----------MENU------------*/
 .main-menu {
   top: 0;
   position: sticky;
@@ -370,12 +385,31 @@ p {
   padding: 1rem;
   color: white;
 }
+@media (max-width: 480px) {
+  .main-menu {
+    padding: 0;
+    font-size: 1rem;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
 .main-menu__list {
   padding-left: 0;
   margin: 0;
 }
+@media (max-width: 480px) {
+  .main-menu__list {
+    display: flex;
+    padding: 1rem 0;
+  }
+}
 .main-menu__item {
   display: inline;
+}
+@media (max-width: 480px) {
+  .main-menu__item {
+    display: inline-block;
+  }
 }
 .main-menu__link {
   color: inherit;
@@ -387,30 +421,13 @@ p {
   border: 2px solid #ff1e56;
   border-radius: 10px;
 }
-
-@media (max-width: 375px) {
-  .header__container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "photo" "description";
-  }
-  .main-menu {
-    padding: 0;
-    font-size: 1rem;
-    width: 100%;
-    overflow-x: auto;
-  }
-  .main-menu__list {
-    display: flex;
-    padding: 1rem 0;
-  }
+@media (max-width: 480px) {
   .main-menu__link {
     flex: 0 0 auto;
   }
-  .main-menu__item {
-    display: inline-block;
-  }
 }
+
+/*----------SEKCE------------*/
 .section {
   padding: 3rem 0;
 }
@@ -422,6 +439,7 @@ p {
   color: #000;
 }
 
+/*----------PATIČKA------------*/
 .button {
   text-decoration: none;
   color: inherit;
