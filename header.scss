@@ -1,0 +1,102 @@
+.header {
+    background-color: $backgroundColorDark;
+    padding: $spacingMedium 0 0;
+    position: relative;
+    overflow: hidden;
+
+    @include small() {
+        margin-top: -3rem;
+    }
+
+    &__container {
+        @include small() {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "photo"
+                "description";
+        }
+
+        @media (min-width: $breakpointSmall) {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-rows: 1fr;
+            grid-template-areas: "photo description";
+            min-height: 80vh;
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        filter: drop-shadow(-3rem 0 3rem rgba(0, 0, 0, 0.3));
+
+        @include small() {
+            width: 120%;
+            margin-left: -30%;
+        }
+
+        @media (min-width: $breakpointSmall) {
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            object-fit: contain;
+            object-position: center bottom;
+        }
+    }
+
+    &__photo-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        grid-area: photo;
+
+        @include small() {
+            z-index: 0;
+        }
+    }
+
+    &__title {
+        @include small() {
+            order: -1;
+            margin: 0 0 -3.5rem;
+            z-index: -1;
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+        text-align: right;
+        grid-area: description;
+        align-self: end;
+        padding-bottom: $spacingMedium;
+
+        .title {
+            font: inherit;
+        }
+
+        @include small() {
+            padding: 0 3rem 1rem 3rem;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &__signature {
+        width: 25rem;
+
+        #signature {
+            stroke-dasharray: 1778;
+            stroke-dashoffset: 1778;
+            animation: signature-animation 3s ease forwards;
+        }
+
+        @include small() {
+            width: 50%;
+            margin-right: -7%;
+        }
+    }
+}
