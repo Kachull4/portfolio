@@ -28,6 +28,12 @@ p {
   margin-bottom: 2rem;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .container {
   max-width: 120rem;
   margin-left: auto;
@@ -150,6 +156,9 @@ p {
 }
 .button--touch:hover {
   box-shadow: 0 0 3rem rgba(0, 0, 0, 0.274);
+}
+.button--touch img {
+  width: unset;
 }
 .button__pulse {
   display: block;
@@ -439,13 +448,15 @@ p {
 @media (min-width: 768px) {
   .work__link {
     order: unset;
-    max-width: 35%;
   }
 }
-.work__img {
-  display: block;
-  width: 100%;
+.work__link img {
   box-shadow: 0 10px 27px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px) {
+  .work__description {
+    max-width: 60%;
+  }
 }
 .work__overlay {
   font: 600 3rem "Montserrat Alternates", sans-serif;

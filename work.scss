@@ -3,6 +3,8 @@
     flex-direction: column;
     gap: $spacingLarge;
 
+
+
     &__item {
         display: flex;
         flex-direction: column;
@@ -22,14 +24,17 @@
 
         @media (min-width: $breakpointMedium) {
             order: unset;
-            max-width: 35%;
+        }
+
+        img {
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.2);
         }
     }
 
-    &__img {
-        display: block;
-        width: 100%;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.2);
+    &__description {
+        @media (min-width: $breakpointMedium) {
+            max-width: 60%;
+        }
     }
 
     &__overlay {
