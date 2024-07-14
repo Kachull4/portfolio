@@ -22,7 +22,7 @@
             grid-template-columns: 1fr auto;
             grid-template-rows: 1fr;
             grid-template-areas: "photo description";
-            min-height: 80vh;
+            min-height: min(80vh, 80rem);
         }
     }
 

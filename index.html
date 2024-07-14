@@ -203,18 +203,38 @@
     <section class="section section--skills section--dark" id="skills">
       <div class="container">
         <h2 class="title title--h2">Dovednosti</h2>
-        <div class="skills">
-          <img class="skills__item" src="svg/html.svg" alt="HTML" />
-          <img class="skills__item" src="svg/css.svg" alt="CSS" />
-          <img class="skills__item" src="svg/sass.svg" alt="SASS" />
-          <img class="skills__item" src="svg/bootstrap.svg" alt="Bootstrap" />
-          <img class="skills__item" src="svg/javascript.svg" alt="JavaScript" />
-          <img class="skills__item" src="svg/react.svg" alt="React" />
-          <img class="skills__item" src="svg/next.svg" alt="Next" />
-          <img class="skills__item" src="svg/github.svg" alt="GitHub" />
-          <img class="skills__item" src="svg/figma.svg" alt="Figma" />
-          <img class="skills__item" src="svg/vscode.svg" alt="VS Code" />
-        </div>
+        <ul class="skills">
+          <li class="skills__item">
+            <img src="svg/html.svg" alt="HTML" />
+          </li>
+          <li class="skills__item">
+            <img src="svg/css.svg" alt="CSS" />
+          </li>
+          <li class="skills__item">
+            <img src="svg/sass.svg" alt="SASS" />
+          </li>
+          <li class="skills__item">
+            <img src="svg/bootstrap.svg" alt="Bootstrap" />
+          </li>
+          <li class="skills__item">
+            <img src="svg/javascript.svg" alt="JavaScript" />
+          </li>
+          <li class="skills__item">
+            <img src="svg/react.svg" alt="React" />
+          </li>
+          <li class="skills__item">
+            <img src="svg/next.svg" alt="Next" />
+          </li>
+          <li class="skills__item">
+            <img src="svg/github.svg" alt="GitHub" />
+          </li>
+          <li class="skills__item">
+            <img src="svg/figma.svg" alt="Figma" />
+          </li>
+          <li class="skills__item">
+            <img src="svg/vscode.svg" alt="VS Code" />
+          </li>
+        </ul>
       </div>
     </section>
     <section class="section section--light" id="experiences">
@@ -222,44 +242,184 @@
         <h2 class="title title--h2">Pracovní zkušenosti</h2>
         <div class="experiences">
           <div class="experiences__item">
-            <img
-              src="images/6336adab7f82c6682f8e0780_etnetera-core-vertical.png"
-              alt="Etnetera Core"
-            />
-            <div>2021 - 2024</div>
-          </div>
-          <div class="experiences__item">
-            <p>
-              Moje kariéra frontend vývojářky začala v Etnetera Core, jedné z
-              předních českých technologických firem, do které jsem nastoupila s
-              velkým nadšením.
-            </p>
-            <p>
-              Měla jsem příležitost pracovat na různorodých projektech, které mi
-              umožnily získat cenné zkušenosti a rozvinout své dovednosti.
-            </p>
-            <p>
-              Vytvářela jsem responzivní uživatelská rozhraní, implementovala
-              design, optimalizovala výkon a zajišťovala přístupnost pro všechny
-              uživatele. Pracovala jsem s nejnovějšími technologiemi a nástroji,
-              což mi pomohlo zlepšit technické dovednosti a naučit se nejlepší
-              praktiky. Naučila jsem se také efektivně komunikovat a
-              spolupracovat s týmem, což je klíčové pro úspěch projektů.
-            </p>
-            <p>
-              Tato zkušenost mě utvrdila v tom, že vývoj webu je správná cesta.
-              Díky této práci jsem získala pevné základy, které mi pomohly
-              pokračovat v kariéře frontend vývojářky. Jsem vděčná za všechny
-              příležitosti a výzvy, které mi tato pozice přinesla, a těším se na
-              další kapitoly své profesní dráhy.
-            </p>
+            <div class="experiences__company">
+              <img
+                src="images/6336adab7f82c6682f8e0780_etnetera-core-vertical.png"
+                alt="Etnetera Core"
+              />
+              <div>2021 - 2024</div>
+            </div>
+            <div class="experiences__description">
+              <p>
+                Moje kariéra frontend vývojářky začala v Etnetera Core, jedné z
+                předních českých technologických firem, do které jsem nastoupila
+                s velkým nadšením.
+              </p>
+              <p>
+                Měla jsem příležitost pracovat na různorodých projektech, které
+                mi umožnily získat cenné zkušenosti a rozvinout své dovednosti.
+              </p>
+              <p>
+                Vytvářela jsem responzivní uživatelská rozhraní, implementovala
+                design, optimalizovala výkon a zajišťovala přístupnost pro
+                všechny uživatele. Pracovala jsem s nejnovějšími technologiemi a
+                nástroji, což mi pomohlo zlepšit technické dovednosti a naučit
+                se nejlepší praktiky. Naučila jsem se také efektivně komunikovat
+                a spolupracovat s týmem, což je klíčové pro úspěch projektů.
+              </p>
+              <p>
+                Tato zkušenost mě utvrdila v tom, že vývoj webu je správná
+                cesta. Díky této práci jsem získala pevné základy, které mi
+                pomohly pokračovat v kariéře frontend vývojářky. Jsem vděčná za
+                všechny příležitosti a výzvy, které mi tato pozice přinesla, a
+                těším se na další kapitoly své profesní dráhy.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section section--work work section--dark" id="work">
+    <section
+      class="section section--certificates section--dark"
+      id="certificates"
+    >
       <div class="container">
-        <h2 class="title title--h2">Moje tovrba</h2>
+        <h2 class="title title--h2">Kurzy & certifikáty</h2>
+        <div
+          style="
+            --swiper-navigation-color: #000;
+            --swiper-pagination-color: #000;
+          "
+          class="swiper-container mySwiper2"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="/images/UC-7fc561b6-b04d-43b3-85fd-47e9d0a3f7c6.jpg"
+                alt="Udemy - Complete guide to React"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/etnetera-react.jpg"
+                alt="Etnetera - React Academy"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/czechitas-html-css-2.webp"
+                alt="Czechitas - HTML a CSS 2"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/foundations-of-ux-design.webp"
+                alt="Coursera - Foundations of UX Design"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/empathize-ux-design.webp"
+                alt="Coursera - UX Design Process"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/ux-design-wireframes.webp"
+                alt="Coursera - UX Design Wireframes"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/ux-research.webp"
+                alt="Coursera - UX Research"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/javascript.webp" alt="Sololearn - Javascript" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/responsive-web-design.webp"
+                alt="Sololearn - Responsive web design"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/css.webp" alt="Sololearn - CSS" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/html.webp" alt="Sololearn - HTML" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div thumbsSlider="" class="mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="/images/UC-7fc561b6-b04d-43b3-85fd-47e9d0a3f7c6.jpg"
+                alt="Udemy - Complete guide to React"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/etnetera-react.jpg"
+                alt="Etnetera - React Academy"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/czechitas-html-css-2.webp"
+                alt="Czechitas - HTML a CSS 2"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/foundations-of-ux-design.webp"
+                alt="Coursera - Foundations of UX Design"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/empathize-ux-design.webp"
+                alt="Coursera - UX Design Process"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/ux-design-wireframes.webp"
+                alt="Coursera - UX Design Wireframes"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/ux-research.webp"
+                alt="Coursera - UX Research"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/javascript.webp" alt="Sololearn - Javascript" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/responsive-web-design.webp"
+                alt="Sololearn - Responsive web design"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/css.webp" alt="Sololearn - CSS" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/html.webp" alt="Sololearn - HTML" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section--work work section--light" id="work">
+      <div class="container">
+        <h2 class="title title--h2">Moje tvorba</h2>
         <div class="work">
           <div class="work__item">
             <div>
@@ -337,136 +497,22 @@
         </div>
       </div>
     </section>
-    <section
-      class="section section--certificates section--dark"
-      id="certificates"
-    >
-      <div class="container">
-        <h2 class="title title--h2">Kurzy & certifikáty</h2>
-        <div
-          style="
-            --swiper-navigation-color: #000;
-            --swiper-pagination-color: #000;
-          "
-          class="swiper-container mySwiper2"
-        >
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                src="/images/UC-7fc561b6-b04d-43b3-85fd-47e9d0a3f7c6.jpg"
-                alt="Udemy - Complete guide to React"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="/images/czechitas-html-css-2.webp"
-                alt="czechitas-html-css-2"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img src="/images/html.webp" alt="html" />
-            </div>
-            <div class="swiper-slide">
-              <img src="/images/css.webp" alt="css" />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="/images/responsive-web-design.webp"
-                alt="responsive-web-design"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img src="/images/javascript.webp" alt="javascript" />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="/images/foundations-of-ux-design.webp"
-                alt="foundations-of-ux-design"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="/images/empathize-ux-design.webp"
-                alt="ux-design-process"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="/images/ux-design-wireframes.webp"
-                alt="ux-design-wireframes"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img src="/images/ux-research.webp" alt="ux-research" />
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-        <div thumbsSlider="" class="mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                src="/images/czechitas-html-css-2.webp"
-                alt="czechitas-html-css-2"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img src="/images/html.webp" alt="html" />
-            </div>
-            <div class="swiper-slide">
-              <img src="/images/css.webp" alt="css" />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="/images/responsive-web-design.webp"
-                alt="responsive-web-design"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img src="/images/javascript.webp" alt="javascript" />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="/images/foundations-of-ux-design.webp"
-                alt="foundations-of-ux-design"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="/images/empathize-ux-design.webp"
-                alt="ux-design-process"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="/images/ux-design-wireframes.webp"
-                alt="ux-design-wireframes"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img src="/images/ux-research.webp" alt="ux-research" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section section__contacts section--light" id="contact">
+    <section class="section section__contacts section--dark" id="contact">
       <div class="container">
         <h2 class="title title--h2">Kontakt</h2>
-        <p class="button-row">
+        <div class="button-row">
           <a
             class="button button--touch"
             href="mailto:katerina.beranova4@gmail.com"
             ><img
               class="button__icon button__icon--send"
-              src="send.svg"
+              src="svg/send.svg"
               alt="send-icon"
             />
             <span class="button__pulse"></span> Get in touch</a
           >
-        </p>
-        <p class="button-row">
+        </div>
+        <div class="button-row">
           <a
             class="button button--social button--instagram"
             href="https://www.instagram.com/kacaberanova/"
@@ -477,41 +523,12 @@
             href="https://www.linkedin.com/in/katerinaberanova/"
             >LinkedIn</a
           >
-        </p>
+        </div>
       </div>
     </section>
     <footer class="footer">
       <p class="footer__text">Thanks for scrolling!</p>
-      <svg
-        class="copyright"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="64"
-        height="64"
-        viewBox="0 0 64 64"
-      >
-        <circle
-          class="circle-jedna"
-          cx="32"
-          cy="32"
-          r="30"
-          fill="none"
-          stroke="#eee"
-          stroke-width="4"
-        />
-        <circle
-          class="circle-dva"
-          cx="32"
-          cy="32"
-          r="16"
-          transform="rotate(170, 32, 32)"
-          fill="none"
-          stroke="#eee"
-          stroke-width="4"
-          stroke-dasharray="37 33"
-        />
-      </svg>
-      <p>Kateřina Beranová 2024</p>
+      <p>&copy; Kateřina Beranová 2024</p>
     </footer>
     <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
     <script src="script.js"></script>

@@ -39,7 +39,6 @@ p {
   font-family: "Montserrat Alternates", sans-serif;
   color: #ff1e56;
   margin: 0;
-  margin-top: 2rem;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -65,7 +64,7 @@ p {
 }
 .title--h2 {
   font-size: 5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 @media (max-width: 480px) {
   .title--h2 {
@@ -88,6 +87,11 @@ p {
 .section {
   padding: 3rem 0;
 }
+@media (min-width: 768px) {
+  .section {
+    padding: 8rem 0;
+  }
+}
 .section--dark {
   background-color: #dcdcf5;
 }
@@ -96,6 +100,99 @@ p {
   color: #000;
 }
 
+.button-row {
+  position: relative;
+  text-align: center;
+  z-index: 0;
+}
+
+.button {
+  text-decoration: none;
+  color: #fff;
+  padding: 2rem;
+  border: 1px solid black;
+  font-size: 2rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  border-radius: 10rem;
+  position: relative;
+  overflow: hidden;
+}
+.button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 6rem;
+  left: -6.5rem;
+  top: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.315), transparent);
+  transition: left 0.8s;
+  transform: skewx(-15deg);
+}
+.button:hover::after {
+  left: calc(100% + 0.5rem);
+}
+.button--touch {
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  color: #fff;
+  background-color: #202040;
+  position: relative;
+  transition: box-shadow 1s;
+  overflow: visible;
+}
+.button--touch::after {
+  display: none;
+}
+.button--touch:hover {
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.274);
+}
+.button__pulse {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0.5rem solid #202040;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: 1.5s pulse-animation ease infinite;
+  pointer-events: none;
+}
+.button--social {
+  width: 15rem;
+}
+.button--instagram {
+  background-image: linear-gradient(to top right, #ffa140, #fc3572, #a23cad);
+  border-color: transparent;
+}
+.button--linkedin {
+  background-color: #0a66c2;
+  border-color: #0a66c2;
+}
+.button__icon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.5em;
+  margin: -0.5em 0.3em -0.3em 0;
+}
+
+@keyframes pulse-animation {
+  from {
+    height: 0;
+    width: 0;
+    border-color: rgba(32, 32, 64, 0.5);
+  }
+  to {
+    height: 21rem;
+    width: 21rem;
+    border-color: transparent;
+  }
+}
 .header {
   background-color: #202040;
   padding: 3rem 0 0;
@@ -120,7 +217,7 @@ p {
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr;
     grid-template-areas: "photo description";
-    min-height: 80vh;
+    min-height: min(80vh, 80rem);
   }
 }
 .header__photo {
@@ -201,7 +298,7 @@ p {
 .main-menu {
   top: 0;
   position: sticky;
-  text-align: right;
+  text-align: center;
   white-space: nowrap;
   font-size: 2.5rem;
   font-family: "Montserrat Alternates", sans-serif;
@@ -264,23 +361,30 @@ p {
   padding: 0;
   list-style: none;
 }
+.experiences__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
 @media (min-width: 768px) {
-  .experiences {
+  .experiences__item {
     flex-direction: row;
+    gap: 5rem;
   }
 }
-.experiences__item {
+.experiences__item img {
+  width: 100%;
+}
+.experiences__company {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media (min-width: 768px) {
-  .experiences__item {
-    width: 50%;
+  .experiences__company {
+    width: 100rem;
   }
-}
-.experiences__item img {
-  max-width: 100%;
 }
 
 .skills {
@@ -288,6 +392,9 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 @media (min-width: 768px) {
   .skills {
@@ -296,12 +403,15 @@ p {
 }
 .skills__item {
   width: 5rem;
-  height: auto;
 }
 @media (min-width: 768px) {
   .skills__item {
     width: 10rem;
   }
+}
+.skills__item img {
+  width: 100%;
+  height: auto;
 }
 
 .work {
@@ -335,7 +445,7 @@ p {
 .work__img {
   display: block;
   width: 100%;
-  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.2);
 }
 .work__overlay {
   font: 600 3rem "Montserrat Alternates", sans-serif;
@@ -415,115 +525,6 @@ p {
   opacity: 1;
 }
 
-.button-row {
-  position: relative;
-  text-align: center;
-  margin-bottom: 8rem;
-  z-index: 0;
-}
-
-@keyframes pulse-animation {
-  from {
-    height: 0;
-    width: 0;
-    border-color: rgba(0, 0, 0, 0.5);
-  }
-  to {
-    height: 21rem;
-    width: 21rem;
-    border-color: transparent;
-  }
-}
-.button {
-  text-decoration: none;
-  color: inherit;
-  padding: 2rem;
-  border: 1px solid black;
-  font-size: 2rem;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 500;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  display: inline-block;
-  border-radius: 10rem;
-  position: relative;
-  overflow: hidden;
-}
-.button::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 6rem;
-  left: -6.5rem;
-  top: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0.315), transparent);
-  transition: left 0.8s;
-  transform: skewx(-15deg);
-}
-.button:hover::after {
-  left: calc(100% + 0.5rem);
-}
-.button--touch {
-  margin-top: 2rem;
-  color: black;
-  background-color: #fff;
-  position: relative;
-  transition: box-shadow 1s;
-  overflow: visible;
-}
-.button--touch::after {
-  display: none;
-}
-.button--touch:hover {
-  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.274);
-}
-.button__pulse {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border: 0.5rem solid rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  animation: 1.5s pulse-animation ease infinite;
-  pointer-events: none;
-}
-.button--social {
-  width: 15rem;
-}
-.button--facebook {
-  background-color: #1877f2;
-  border-color: #1877f2;
-}
-.button--instagram {
-  background-image: linear-gradient(to top right, #ffa140, #fc3572, #a23cad);
-  border-color: transparent;
-}
-.button--linkedin {
-  background-color: #0a66c2;
-  border-color: #0a66c2;
-}
-.button--youtube {
-  background-color: #f00;
-  border-color: #f00;
-}
-.button--inmobil {
-  background-color: #ffde29;
-  border: 0.5rem solid black;
-  font-weight: 600;
-  font-size: 3rem;
-  text-align: center;
-  width: 25rem;
-}
-.button__icon {
-  display: inline-block;
-  vertical-align: middle;
-  height: 1.5em;
-  margin: -0.5em 0.3em -0.3em 0;
-}
-
 .footer {
   background-color: #202040;
   padding-top: 4rem;
@@ -533,28 +534,4 @@ p {
 }
 .footer__text {
   font-size: 3rem;
-}
-
-@keyframes circle-animation {
-  from {
-    stroke-dasharray: 0 200;
-  }
-  to {
-    stroke-dasharray: 200 0;
-  }
-}
-@keyframes copy-animation {
-  from {
-    stroke-dasharray: 0 100;
-  }
-  to {
-    stroke-dasharray: 37 33;
-  }
-}
-.circle-jedna {
-  animation: circle-animation 2s ease infinite;
-}
-
-.circle-dva {
-  animation: copy-animation 2s ease infinite;
 }/*# sourceMappingURL=styles.css.map */
