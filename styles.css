@@ -101,6 +101,11 @@ img {
 .section--dark {
   background-color: #dcdcf5;
 }
+@media (prefers-contrast: more) {
+  .section--dark {
+    background-color: #fff;
+  }
+}
 .section--light {
   background-color: white;
   color: #000;

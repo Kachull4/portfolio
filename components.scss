@@ -64,6 +64,10 @@
 
     &--dark {
         background-color: $backgroundColorLight;
+
+        @media (prefers-contrast: more) {
+            background-color: #fff;
+        }
     }
 
     &--light {
