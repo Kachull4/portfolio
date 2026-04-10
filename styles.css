@@ -376,6 +376,7 @@ img {
   list-style: none;
 }
 .experiences__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -387,8 +388,19 @@ img {
     gap: 5rem;
   }
 }
+.experiences__item:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  width: 20rem;
+  height: 3px;
+  background-color: #dcdcf5;
+  opacity: 0.25;
+}
 .experiences__item img {
   width: 100%;
+  max-width: 20rem;
 }
 .experiences__company {
   display: flex;
@@ -397,8 +409,12 @@ img {
 }
 @media (min-width: 768px) {
   .experiences__company {
-    width: 100rem;
+    width: 100%;
+    max-width: 25rem;
   }
+}
+.experiences__period {
+  margin-top: 1rem;
 }
 
 .skills {
@@ -447,7 +463,8 @@ img {
 .work__link {
   display: inline-block;
   position: relative;
-  max-width: 100%;
+  width: 100%;
+  max-width: 40rem;
   order: 2;
 }
 @media (min-width: 768px) {
@@ -467,8 +484,7 @@ img {
   font: 600 3rem "Montserrat Alternates", sans-serif;
   position: absolute;
   text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   display: flex;
   color: #fff;
   top: 0;
@@ -491,6 +507,12 @@ img {
 }
 .work__overlay--kacafoti {
   background-color: rgba(255, 102, 102, 0.8666666667);
+}
+.work__overlay--detskyterapeut {
+  background-color: rgba(255, 239, 197, 0.8666666667);
+}
+.work__overlay--katerinahoffman {
+  background-color: rgba(98, 98, 93, 0.8666666667);
 }
 
 .swiper-container {

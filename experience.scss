@@ -1,34 +1,52 @@
 .experiences {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: $spacingSmall;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
     gap: $spacingSmall;
-    padding: 0;
-    list-style: none;
 
-    &__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: $spacingSmall;
-
-        @media (min-width: $breakpointMedium) {
-            flex-direction: row;
-            gap: $spacingLarge;
-        }
-
-        img {
-            width: 100%;
-        }
+    @media (min-width: $breakpointMedium) {
+      flex-direction: row;
+      gap: $spacingLarge;
     }
 
-    &__company {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        @media (min-width: $breakpointMedium) {
-            width: 100rem;
-        }
+    &:not(:first-child)::before {
+      content: "";
+      position: absolute;
+      top: -2rem;
+      left: 50%;
+      width: 20rem;
+      height: 3px;
+      background-color: #dcdcf5;
+      opacity: 0.25;
     }
+
+    img {
+      width: 100%;
+      max-width: 20rem;
+    }
+  }
+
+  &__company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $breakpointMedium) {
+      width: 100%;
+      max-width: 25rem;
+    }
+  }
+
+  &__period {
+    margin-top: 1rem;
+  }
 }

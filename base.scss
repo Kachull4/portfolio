@@ -1,34 +1,34 @@
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 html,
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: $fontFamilyBase;
-    font-size: 1.6rem;
-    background-color: $backgroundColorDark;
+  font-family: $fontFamilyBase;
+  font-size: 1.6rem;
+  background-color: $backgroundColorDark;
 
-    @media (min-width: $breakpointMedium) {
-        font-size: 1.8rem;
-    }
+  @media (min-width: $breakpointMedium) {
+    font-size: 1.8rem;
+  }
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 p {
-    margin: 0;
-    margin-bottom: $spacingSmall;
+  margin: 0;
+  margin-bottom: $spacingSmall;
 }
 
 img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
