@@ -2,12 +2,14 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "sass styles.scss styles.css --style=expanded --source-map",
-    "build:css": "npm run build",
-    "watch:css": "sass --watch styles.scss:styles.css --style=expanded --source-map"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
-  "devDependencies": {
+  "dependencies": {
+    "astro": "^7.1.3",
     "sass": "^1.89.2"
   }
 }

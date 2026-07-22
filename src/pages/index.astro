@@ -1,3 +1,7 @@
+---
+import "../styles/styles.scss";
+---
+
 <!doctype html>
 <html lang="cs">
   <head>
@@ -23,7 +27,6 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -53,10 +56,11 @@
     <meta name="theme-color" content="#ffffff" />
     <title>Kateřina Hoffman</title>
     <script
+      is:inline
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-QP1RN9LBMR"
     ></script>
-    <script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -538,7 +542,10 @@
       <p class="footer__text">Thanks for scrolling!</p>
       <p>&copy; Kateřina Hoffman 2024</p>
     </footer>
-    <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script
+      is:inline
+      src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"
+    ></script>
+    <script is:inline src="/script.js"></script>
   </body>
 </html>
