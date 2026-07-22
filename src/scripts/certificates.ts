@@ -1,6 +1,7 @@
 import Swiper from "swiper";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { A11y, FreeMode, Navigation, Thumbs } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/a11y";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
@@ -19,7 +20,7 @@ if (certificateThumbnailsElement && certificatesElement) {
   });
 
   new Swiper(certificatesElement, {
-    modules: [Navigation, Thumbs],
+    modules: [A11y, Navigation, Thumbs],
     spaceBetween: 10,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -27,6 +28,17 @@ if (certificateThumbnailsElement && certificatesElement) {
     },
     thumbs: {
       swiper: certificateThumbnails,
+    },
+    a11y: {
+      enabled: true,
+      prevSlideMessage: "Předchozí certifikát",
+      nextSlideMessage: "Následující certifikát",
+      firstSlideMessage: "Toto je první certifikát",
+      lastSlideMessage: "Toto je poslední certifikát",
+      containerMessage: "Galerie certifikátů",
+      containerRoleDescriptionMessage: "Karusel",
+      itemRoleDescriptionMessage: "Certifikát",
+      slideLabelMessage: "{{index}} z {{slidesLength}}",
     },
   });
 }

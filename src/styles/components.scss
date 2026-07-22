@@ -1,6 +1,21 @@
 @use "sass:color";
 @use "variables" as *;
 
+.skip-link {
+  position: fixed;
+  top: $spacingSmall;
+  left: $spacingSmall;
+  z-index: 2000;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  background-color: $backgroundColorDark;
+  transform: translateY(-200%);
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
 .container {
   max-width: 120rem;
   margin-left: auto;
