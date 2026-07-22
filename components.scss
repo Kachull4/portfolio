@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "variables" as *;
+
 .container {
   max-width: 120rem;
   margin-left: auto;
@@ -179,7 +182,7 @@
   from {
     height: 0;
     width: 0;
-    border-color: transparentize($backgroundColorDark, 0.5);
+    border-color: color.adjust($backgroundColorDark, $alpha: -0.5);
   }
 
   to {

@@ -1,0 +1,13 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sass styles.scss styles.css --style=expanded --source-map",
+    "build:css": "npm run build",
+    "watch:css": "sass --watch styles.scss:styles.css --style=expanded --source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
