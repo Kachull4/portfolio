@@ -5,11 +5,9 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-const certificateThumbnailsElement = document.querySelector<HTMLElement>(
-  ".mySwiper",
-);
-const certificatesElement =
-  document.querySelector<HTMLElement>(".mySwiper2");
+const certificateThumbnailsElement =
+  document.querySelector<HTMLElement>(".mySwiper");
+const certificatesElement = document.querySelector<HTMLElement>(".mySwiper2");
 
 if (certificateThumbnailsElement && certificatesElement) {
   const certificateThumbnails = new Swiper(certificateThumbnailsElement, {

@@ -14,7 +14,9 @@ import { experiences } from "../data/experience";
               <div class="experiences__period">{experience.period}</div>
             </div>
             <div class="experiences__description">
-              {experience.description.map((paragraph) => <p>{paragraph}</p>)}
+              {experience.description.map((paragraph) => (
+                <p>{paragraph}</p>
+              ))}
             </div>
           </div>
         ))

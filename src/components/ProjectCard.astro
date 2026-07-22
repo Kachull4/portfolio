@@ -14,7 +14,9 @@ const overlayClass = `work__overlay--${project.overlayModifier}`;
     project.imagePosition === "right" && (
       <div class="work__description">
         <h3>{project.title}</h3>
-        {project.description.map((paragraph) => <p>{paragraph}</p>)}
+        {project.description.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
       </div>
     )
   }
@@ -39,7 +41,9 @@ const overlayClass = `work__overlay--${project.overlayModifier}`;
     project.imagePosition === "left" && (
       <div class="work__description">
         <h3>{project.title}</h3>
-        {project.description.map((paragraph) => <p>{paragraph}</p>)}
+        {project.description.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
       </div>
     )
   }
