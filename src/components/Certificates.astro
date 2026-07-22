@@ -1,3 +1,7 @@
+---
+import { certificates } from "../data/certificates";
+---
+
 <section
   class="section section--certificates section--dark"
   id="certificates"
@@ -12,114 +16,26 @@
       class="swiper-container mySwiper2"
     >
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img
-            src="/images/UC-7fc561b6-b04d-43b3-85fd-47e9d0a3f7c6.webp"
-            alt="Udemy - Complete guide to React"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img src="/images/etnetera-react.jpg" alt="Etnetera - React Academy" />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="/images/czechitas-html-css-2.webp"
-            alt="Czechitas - HTML a CSS 2"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="/images/foundations-of-ux-design.webp"
-            alt="Coursera - Foundations of UX Design"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="/images/empathize-ux-design.webp"
-            alt="Coursera - UX Design Process"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="/images/ux-design-wireframes.webp"
-            alt="Coursera - UX Design Wireframes"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img src="/images/ux-research.webp" alt="Coursera - UX Research" />
-        </div>
-        <div class="swiper-slide">
-          <img src="/images/javascript.webp" alt="Sololearn - Javascript" />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="/images/responsive-web-design.webp"
-            alt="Sololearn - Responsive web design"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img src="/images/css.webp" alt="Sololearn - CSS" />
-        </div>
-        <div class="swiper-slide">
-          <img src="/images/html.webp" alt="Sololearn - HTML" />
-        </div>
+        {
+          certificates.map((certificate) => (
+            <div class="swiper-slide">
+              <img src={certificate.image} alt={certificate.imageAlt} />
+            </div>
+          ))
+        }
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
     <div thumbsSlider="" class="mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img
-            src="/images/UC-7fc561b6-b04d-43b3-85fd-47e9d0a3f7c6.webp"
-            alt="Udemy - Complete guide to React"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img src="/images/etnetera-react.jpg" alt="Etnetera - React Academy" />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="/images/czechitas-html-css-2.webp"
-            alt="Czechitas - HTML a CSS 2"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="/images/foundations-of-ux-design.webp"
-            alt="Coursera - Foundations of UX Design"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="/images/empathize-ux-design.webp"
-            alt="Coursera - UX Design Process"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="/images/ux-design-wireframes.webp"
-            alt="Coursera - UX Design Wireframes"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img src="/images/ux-research.webp" alt="Coursera - UX Research" />
-        </div>
-        <div class="swiper-slide">
-          <img src="/images/javascript.webp" alt="Sololearn - Javascript" />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="/images/responsive-web-design.webp"
-            alt="Sololearn - Responsive web design"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img src="/images/css.webp" alt="Sololearn - CSS" />
-        </div>
-        <div class="swiper-slide">
-          <img src="/images/html.webp" alt="Sololearn - HTML" />
-        </div>
+        {
+          certificates.map((certificate) => (
+            <div class="swiper-slide">
+              <img src={certificate.image} alt={certificate.imageAlt} />
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>

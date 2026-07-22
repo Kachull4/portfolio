@@ -1,23 +1,18 @@
+---
+import { skills } from "../data/skills";
+---
+
 <section class="section section--skills section--dark" id="skills">
   <div class="container">
     <h2 class="title title--h2">Dovednosti</h2>
     <ul class="skills">
-      <li class="skills__item"><img src="svg/html.svg" alt="HTML" /></li>
-      <li class="skills__item"><img src="svg/css.svg" alt="CSS" /></li>
-      <li class="skills__item"><img src="svg/sass.svg" alt="SASS" /></li>
-      <li class="skills__item">
-        <img src="svg/bootstrap.svg" alt="Bootstrap" />
-      </li>
-      <li class="skills__item">
-        <img src="svg/javascript.svg" alt="JavaScript" />
-      </li>
-      <li class="skills__item"><img src="svg/react.svg" alt="React" /></li>
-      <li class="skills__item"><img src="svg/next.svg" alt="Next" /></li>
-      <li class="skills__item"><img src="svg/github.svg" alt="GitHub" /></li>
-      <li class="skills__item"><img src="svg/figma.svg" alt="Figma" /></li>
-      <li class="skills__item">
-        <img src="svg/vscode.svg" alt="VS Code" />
-      </li>
+      {
+        skills.map((skill) => (
+          <li class="skills__item">
+            <img src={skill.icon} alt={skill.name} />
+          </li>
+        ))
+      }
     </ul>
   </div>
 </section>

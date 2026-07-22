@@ -1,0 +1,46 @@
+---
+import type { Project } from "../data/projects";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const overlayClass = `work__overlay--${project.overlayModifier}`;
+---
+
+<div class="work__item">
+  {
+    project.imagePosition === "right" && (
+      <div class="work__description">
+        <h3>{project.title}</h3>
+        {project.description.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    )
+  }
+  {
+    project.url ? (
+      <a class="work__link" href={project.url}>
+        <img src={project.image} alt={project.imageAlt} />
+        <span class:list={["work__overlay", overlayClass]}>
+          {project.overlayLabel}
+        </span>
+      </a>
+    ) : (
+      <div class="work__link">
+        <img src={project.image} alt={project.imageAlt} />
+        <span class:list={["work__overlay", overlayClass]}>
+          {project.overlayLabel}
+        </span>
+      </div>
+    )
+  }
+  {
+    project.imagePosition === "left" && (
+      <div class="work__description">
+        <h3>{project.title}</h3>
+        {project.description.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    )
+  }
+</div>

@@ -1,123 +1,13 @@
+---
+import { projects } from "../data/projects";
+import ProjectCard from "./ProjectCard.astro";
+---
+
 <section class="section section--work work section--light" id="work">
   <div class="container">
     <h2 class="title title--h2">Moje tvorba</h2>
     <div class="work">
-      <div class="work__item">
-        <div class="work__description">
-          <h3>Frontendistka.cz</h3>
-          <p>
-            Můj první projekt nebyl nijak složitý. Chtěla jsem vytvořit
-            jednoduchou osobní stránku, která by sloužila jako moje
-            portfolio.
-          </p>
-          <p>
-            Využila jsem HTML, CSS a špetku JavaScriptu. Stránka má
-            jednoduchý design a obsahuje několik sekcí.
-          </p>
-        </div>
-        <a class="work__link" href="https://www.frontendistka.cz"
-          ><img src="/images/frontendistka.webp" alt="Frontendistka.cz" />
-          <span class="work__overlay work__overlay--frontendistka"
-            >Frontendistka</span
-          >
-        </a>
-      </div>
-      <div class="work__item">
-        <a class="work__link" href="http://www.in-mobil.cz"
-          ><img src="/images/in-mobil.webp" alt="In-mobil.cz" />
-          <span class="work__overlay work__overlay--inmobil">In-Mobil</span>
-        </a>
-        <div class="work__description">
-          <h3>In-mobil.cz</h3>
-          <p>
-            Můj další krok mě přivedl k vytvoření profesionální stránky pro
-            in-mobil.cz, což je specializovaná platforma zaměřená na prodej
-            a servis mobilních zařízení. Cílem bylo vytvořit moderní,
-            přehlednou a uživatelsky přívětivou webovou stránku, která by
-            přilákala zákazníky a zprostředkovala jim všechny potřebné
-            informace.
-          </p>
-          <p>
-            Při vývoji jsem použila HTML, CSS, JavaScript a Google Map API.
-          </p>
-        </div>
-      </div>
-      <div class="work__item">
-        <div class="work__description">
-          <h3>Káčafotí.cz</h3>
-          <p>
-            Tento projekt byl pro mě obzvlášť důležitý, protože šlo o osobní
-            stránku, která by sloužila jako online galerie pro moje
-            fotografie. Chtěla jsem vytvořit místo, kde bych mohla sdílet
-            svou vášeň pro fotografování s ostatními.
-          </p>
-          <p>
-            K vývoji stránky jsem použila React s Next.js, Typescript a
-            mnoho javascriptových balíčů.
-          </p>
-          <p>
-            Fotografický blog jsem později začlenila do své nové osobní
-            stránky katerinahoffman.cz, proto už původní doména není
-            dostupná.
-          </p>
-        </div>
-        <div class="work__link"
-          ><img src="/images/kacafoti.webp" alt="Káčafotí.cz" />
-          <span class="work__overlay work__overlay--kacafoti">Káča fotí</span>
-        </div>
-      </div>
-      <div class="work__item">
-        <a class="work__link" href="https://www.detskyterapeut.cz"
-          ><img src="/images/detskyterapeut.webp" alt="Dětskýterapeut.cz" />
-          <span class="work__overlay work__overlay--detskyterapeut"
-            >Dětský terapeut</span
-          >
-        </a>
-        <div class="work__description">
-          <h3>Dětskýterapeut.cz</h3>
-          <p>
-            Webová prezentace pro dětskou psycholožku zaměřená na
-            přehlednost, důvěryhodnost a přívětivý vizuální styl.
-          </p>
-          <p>
-            Stránka je navržená s důrazem na jednoduchou orientaci,
-            přístupnost a srozumitelnou strukturu informací pro rodiče i
-            děti.
-          </p>
-          <p>
-            Využila jsem HTML, SCSS a moderní postupy pro tvorbu
-            responzivního a udržitelného řešení.
-          </p>
-        </div>
-      </div>
-      <div class="work__item">
-        <div class="work__description">
-          <h3>KateřinaHoffman.cz</h3>
-          <p>
-            Osobní web zaměřený na prezentaci a prodej mých fotografií a
-            obrazů. Cílem bylo vytvořit vizuálně výraznou, ale zároveň
-            přehlednou galerii, která nechá vyniknout samotnou tvorbu.
-          </p>
-          <p>
-            Stránka propojuje autorskou fotografii, obrazy a online
-            prezentaci v jednotném stylu s důrazem na atmosféru, jednoduchou
-            orientaci a čisté zpracování.
-          </p>
-          <p>
-            K vývoji jsem použila React, Next.js, TypeScript a moderní
-            frontendové postupy pro tvorbu responzivního řešení.
-          </p>
-        </div>
-        <a class="work__link" href="https://www.katerinahoffman.cz"
-          ><img
-            src="/images/katerinahoffmanart.webp"
-            alt="KateřinaHoffman.cz"
-          />
-          <span class="work__overlay work__overlay--katerinahoffman"
-            >Kateřina Hoffman</span
-          >
-        </a>
-      </div>
+      {projects.map((project) => <ProjectCard project={project} />)}
     </div>
   </div>
 </section>
