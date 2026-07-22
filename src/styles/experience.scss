@@ -25,10 +25,15 @@
       position: absolute;
       top: -2rem;
       left: 50%;
+      transform: translateX(-50%);
       width: 20rem;
       height: 3px;
       background-color: #dcdcf5;
       opacity: 0.25;
+
+      @media (min-width: $breakpointMedium) {
+        transform: none;
+      }
     }
 
     img {
